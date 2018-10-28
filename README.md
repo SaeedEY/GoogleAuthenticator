@@ -10,8 +10,14 @@ A Modified Version of Google Authenticator PHP Script at [ github.com/sonata-pro
 6
 7
 8
-9</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #007020">&lt;?php</span>
+9
+10
+11
+12</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #007020">&lt;?php</span>
     <span style="color: #007020; font-weight: bold">require</span> <span style="color: #4070a0">&#39;_init_.php&#39;</span>;
+    <span style="color: #bb60d5">$AppName</span><span style="color: #666666"> = </span><span style="color: #4070a0">"SaeedEY_GoogleAuthenticator"</span>;
+    <span style="color: #bb60d5">$UserName</span><span style="color: #666666"> = </span><span style="color: #4070a0">"SaeedEY"</span>;
+    <span style="color: #bb60d5">$ga</span><span style="color: #666666"> = new </span><span style="color: #4070a0">GoogleAuth</span>($AppName,$UserName);
     <span style="color: #bb60d5">$code</span> <span style="color: #666666">=</span> <span style="color: #bb60d5">$_REQUEST</span>[<span style="color: #4070a0">&#39;code&#39;</span>];<span style="color: #60a0b0; font-style: italic">//Code That Taken By Html Input</span>
     <span style="color: #007020; font-weight: bold">if</span>(<span style="color: #666666">!</span><span style="color: #bb60d5">$ga</span><span style="color: #666666">-&gt;</span><span style="color: #4070a0">hasLogin</span>(<span style="color: #bb60d5">$code</span>)){
        <span style="color: #007020; font-weight: bold">echo</span> <span style="color: #4070a0">&quot;NOT LOGIN !&lt;br&gt;Please Scan This QrCode Again ! &lt;br&gt;&quot;</span>;
